@@ -20,12 +20,12 @@ spec:
                 - name: my-backend-container
                   image: kheel/mybackend
                   env:
-                    - name: PGPASSWORD
+                    - name: POSTGRES_PASSWORD
                       valueFrom:
                           secretKeyRef:
                               name: postgres-secret
                               key: PGPASSWORD
-                    - name: PGUSER
+                    - name: POSTGRES_USER
                       valueFrom:
                           configMapKeyRef:
                               name: myapp-config
